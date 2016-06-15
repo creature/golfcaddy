@@ -1,0 +1,8 @@
+challenge: Given a string, output the length of that string.
+tests:
+  -
+    input: abcdef
+    output: 6
+  -
+    input: abcd
+    output: 4
