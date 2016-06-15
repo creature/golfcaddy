@@ -1,0 +1,36 @@
+challenge: Given a string, remove all the vowels from that string.
+tests:
+  -
+    input: hello
+    output: hll
+  -
+    input: Into the garbage chute, flyboy!
+    output: nt th grbg cht, flyby!
+  -
+    input: She may not look like much, but she's got it where it counts, kid.
+    output: Sh my nt lk lk mch, bt sh's gt t whr t cnts, kd.
+  -
+    input: Jackdaws love my big sphinx of quartz
+    output: Jckdws lv my bg sphnx f qrtz
+  -
+    input: Hoot. Hoooooot. Hot hoot hooot hooioioit.
+    output: Ht. Ht. Ht ht ht ht.
+  -
+    input: 99 bottles of beer on the wall, 99 bottles of beer. Take one down, pass it around, 98 bottles of beer on the wall.
+    output: 99 bttls f br n th wll, 99 bttls f br. Tk n dwn, pss t rnd, 98 bttls f br n th wll.
+  -
+    input:
+    output:
+  -
+    input: A ee iiii oooo uuuu
+    output: "    "
+  -
+    input: If this and that, and that and this together make 12, and this is twice that, what are the values of this and that?
+    output: f ths nd tht, nd tht nd ths tgthr mk 12, nd ths s twc tht, wht r th vls f ths nd tht?
+  -
+    input: 123.4i5
+    output: 123.45
+  -
+    input: To aaaa eee uuuuuuuuu iiiiciiiio uuuuu S
+    output: T    c  S
+

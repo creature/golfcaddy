@@ -1,0 +1,17 @@
+challenge: Given a string, output the shortest string that makes it into a palindrome.
+tests:
+  -
+    input: "test"
+    output: "testset"
+  -
+    input: "NEVERODDOREVEN"
+    output: "NEVERODDOREVEN"
+  -
+    input: "amanaplanacatacanalpanama"
+    output: "amanaplanacatacanalpanama"
+  -
+    input: "banana"
+    output: "bananab"
+  -
+    input: "testsests"
+    output: "testsestset"

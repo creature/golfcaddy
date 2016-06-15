@@ -1,0 +1,47 @@
+#!/usr/bin/env ruby
+require 'yaml'
+require 'pty'
+
+if ARGV.length != 3
+  puts "Usage: golfcaddy <holefile> <runner> <source_file>"
+  puts "eg. golfcaddy hole1.yaml ruby stringcounter.rb"
+  exit 1
+end
+
+data = YAML.load_file(ARGV[0])
+puts "YOUR MISSION: #{data['challenge']}"
+success_count = 0
+
+data["tests"].each do |test|
+  PTY.spawn("#{ARGV[1]} #{ARGV[2]}") do |r, w, pid|
+    w.puts test["input"]
+    r.readline # PTYs echo back their input by default, so just gobble that up.
+    begin
+      output = r.readline.chomp
+    rescue EOFError
+      puts "F"
+      puts "Failed!"
+      puts "Given an input of '#{test["input"]}', I expected the output to be:"
+      puts test["output"]
+      puts "\nBut, your program produced no output on stdout. :("
+      exit 1
+    end
+
+    if output == test["output"].to_s.chomp
+      success_count += 1
+      print "."
+    else
+      puts "F"
+      puts "Failed!"
+      puts "Given an input of '#{test["input"]}', I expected the output to be:"
+      puts test["output"]
+      puts "\nBut, your program produced:"
+      puts output
+      exit 1
+    end
+  end
+end
+
+puts "\nSuccess! #{success_count} tests passed."
+char_count = File.read(ARGV[2]).gsub(/\s/, "").length
+puts "Your code has a score of #{char_count} (lower is better)."
