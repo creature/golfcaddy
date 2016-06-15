@@ -10,6 +10,7 @@ end
 
 data = YAML.load_file(ARGV[0])
 puts "YOUR MISSION: #{data['challenge']}"
+puts "\n\n"
 success_count = 0
 
 data["tests"].each do |test|
@@ -20,7 +21,7 @@ data["tests"].each do |test|
       output = r.readline.chomp
     rescue EOFError
       puts "F"
-      puts "Failed!"
+      puts "Failed! \n\n"
       puts "Given an input of '#{test["input"]}', I expected the output to be:"
       puts test["output"]
       puts "\nBut, your program produced no output on stdout. :("
@@ -32,7 +33,7 @@ data["tests"].each do |test|
       print "."
     else
       puts "F"
-      puts "Failed!"
+      puts "Failed!\n\n"
       puts "Given an input of '#{test["input"]}', I expected the output to be:"
       puts test["output"]
       puts "\nBut, your program produced:"
