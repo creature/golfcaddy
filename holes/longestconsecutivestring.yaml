@@ -1,0 +1,34 @@
+challenge: Given a string of characters, output the length of the longest run of identical characters. Letters should ignore case.
+tests:
+  -
+    input: "football"
+    output: 2
+  -
+    input: "freeer"
+    output: 3
+  -
+    input: Fiji
+    output: 1
+  -
+    input: Governessship
+    output: 3
+  -
+    input: 123332223334556666677777777777888823
+    output: 11
+  -
+    input: What's the frequency, kenneth?
+    output: 2
+  -
+    input: "This is a string with        a lot of spaces."
+    output: 8
+  -
+    input: Aardvark
+    output: 2
+  -
+    input:
+    output: 0
+  -
+    input: Esssse
+    output: 4
+
+

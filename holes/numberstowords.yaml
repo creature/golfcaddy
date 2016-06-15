@@ -1,0 +1,56 @@
+challenge: Given a number, output that number as words. Like you were reading it over the telephone.
+tests:
+  -
+    input: 1
+    output: one
+  -
+    input: 0
+    output: zero
+  -
+    input: 23
+    output: twenty three
+  -
+    input: 11
+    output: eleven
+  -
+    input: 18
+    output: eighteen
+  -
+    input: 100
+    output: one hundred
+  -
+    input: 101
+    output: one hundred and one
+  -
+    input: 321
+    output: three hundred and twenty one
+  -
+    input: 999
+    output: nine hundred and ninety nine
+  -
+    input: 1000
+    output: one thousand
+  -
+    input: -1
+    output: minus one
+  -
+    input: -1.5
+    output: minus one point 5
+  -
+    input: 123.45
+    output: one hundred and twenty three point four five
+  -
+    input: 99.9999
+    output: ninety nine point nine nine nine nine
+  -
+    input: 100000
+    output: one hundred thousand
+  -
+    input: 12345.67
+    output: twelve thousand three hundred and forty five point six seven
+  -
+    input: 0.001
+    output: zero point zero zero one
+  -
+    input: 1000000
+    output: one million

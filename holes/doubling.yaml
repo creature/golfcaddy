@@ -1,0 +1,17 @@
+challenge: Given a string, double all the characters in that string.
+tests:
+  -
+    input: a
+    output: aa
+  -
+    input: abcde
+    output: aabbccddee
+  -
+    input: 1234567890
+    output: 11223344556677889900
+  -
+    input:
+    output:
+  -
+    input: longcat is long
+    output: lloonnggccaatt  iiss  lloonngg
