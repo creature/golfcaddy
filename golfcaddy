@@ -3,6 +3,7 @@ require 'yaml'
 require 'pty'
 
 if ARGV.length != 3
+  puts "Your golfcaddy is ready to play!\n\n"
   puts "Usage: golfcaddy <holefile> <runner> <source_file>"
   puts "eg. golfcaddy hole1.yaml ruby stringcounter.rb"
   exit 1
