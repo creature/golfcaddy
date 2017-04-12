@@ -13,7 +13,7 @@ Code golf's a fun & educational exercise that encourages players to think about 
 
 ## Using Golfcaddy
 
-1. Send your participants a copy of `golfcaddy`. They should: 
+1. **Send your participants a copy of `golfcaddy`**. They should: 
     1. Create a new directory, & place Golfcaddy in it:
         ```bash
         mkdir codegolf
@@ -32,11 +32,11 @@ Code golf's a fun & educational exercise that encourages players to think about 
         Usage: golfcaddy <holefile> <runner> <source_file>
         eg. golfcaddy hole1.yaml ruby stringcounter.rb
         ```
-2. Send your players a hole file. These describe the challenge and act like unit tests for the player's program. There [are a number to choose from](holes/), of varying difficulty and duration. The players should put this in the same directory as Golfcaddy.
+2. **Send your players a hole file**. These describe the challenge and act like unit tests for the player's program. There [are a number to choose from](holes/), of varying difficulty and duration. The players should put this in the same directory as Golfcaddy.
     ```bash
     mv ~/Downloads/fizzbuzz.yaml codegolf
     ```
-3. Create an empty program, and tell Golfcaddy to run it. Golfcaddy doesn't care what language you use, but I'm going to use Ruby. The first argument passed to Golfcaddy is the hole file; the rest of the arguments are presumed to be how to run the program. The last one is treated as the source code for your program.
+3. **Create an empty program, and tell Golfcaddy to run it**. Golfcaddy doesn't care what language you use, but I'm going to use Ruby. The first argument passed to Golfcaddy is the hole file; the rest of the arguments are presumed to be how to run the program. The last one is treated as the source code for your program.
    ```bash
    touch fizzbuzz.rb
    golfcaddy fizzbuzz.yaml ruby fizzbuzz.rb
@@ -73,7 +73,7 @@ Code golf's a fun & educational exercise that encourages players to think about 
     But, your program produced:
     1, 2, 3, 4, 5
     ```
-5. When players produce a working program then Golfcaddy  prints their score. Golfcaddy doesn't care about whitespace or newlines, so you can space things out to keep a little readability in your program.
+5. **When players produce a working program then Golfcaddy prints their score**. Golfcaddy doesn't care about whitespace or newlines, so you can space things out to keep a little readability in your program.
     ```plaintext
     YOUR MISSION: Given a number, output all the numbers from 1 to that number as a comma-separated list. But! If a number is a multiple of three, it should output "fizz" instead. If it's a multiple of five, it should output "buzz" instead. If it's a multiple of both, then it should output "fizzbuzz".
 
@@ -91,6 +91,11 @@ Code golf's a fun & educational exercise that encourages players to think about 
 * Space out your holes in 10-15 minute intervals, based on how players are getting on. Allow players to go back and improve their scores on older holes, if they like, but your goal should be for everyone to finish all holes. 
 * Code golf works best when players are in teams of 2 or 3. As well as sharing ideas, it helps players not get completely stuck.
 * Keeping a leaderboard of teams & their best score for each hole on a whiteboard is a _great_ way of encouraging friendly competition & letting people know there's a shorter way of doing things. 
+* You can use compiled languages with Golfcaddy too, as long as your program doesn't care about its command line arguments. Just put your source file name as the last argument in your golfcaddy command. For instance, if you'd written a `fizzbuzzingo` program in Go: 
+    ```bash
+    ./golfcaddy fizzbuzz.yaml fizzbuzzingo fizzbuzz.go
+    ```
+    Golfcaddy won't ensure that your source file got compiled, though - that's down to your players.
 * While Golfcaddy is language-agnostic, I **strongly recommend** not using JavaScript unless everyone's using JavaScript. Working with `stdin` and `stdout` is hard to explain in JavaScript, and very verbose. But if you do attempt it, here's an example ES6 program that replaces the word "cat" with "dog":
     ```javascript
     process.stdin.pipe(require('stream').Transform({
