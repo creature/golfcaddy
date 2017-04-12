@@ -1,0 +1,15 @@
+challenge: No matter what the input, output the string "Hello, world!". This is a good way to test your overall setup.
+suggested_time: 10 minutes
+tests:
+  -
+    input: Hi
+    output: Hello, world!
+  -
+    input: Hello, world!
+    output: Hello, world!
+  -
+    input: Why do you park on a driveway, but drive on a parkway?
+    output: Hello, world!
+  -
+    input: ""
+    output: Hello, world!
