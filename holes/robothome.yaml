@@ -1,0 +1,35 @@
+challenge: You have a robot that moves on an infinite grid. Given a string made up of "u" (up), "d" (down), "l" (left), and "r" (right), output "home" or "away" depending on whether the robot is back on the starting square or not.
+suggested_time: 20 minutes
+tests:
+  -
+    input: ud
+    output: home
+  -
+    input: lrlr
+    output: home
+  -
+    input: lrr
+    output: away
+  -
+    input: uddllurr
+    output: home
+  -
+    input: uddllruuudduudllllll
+    output: away
+  -
+    input: uuduudllrllr
+    output: away
+  -
+    input: uuduudllrllrdduddurrlrrl
+    output: home
+  -
+    input: ldru
+    output: home
+  -
+    input: udddllrllruuduuduullrrr
+    output: away
+  -
+    input: ""
+    output: home
+
+

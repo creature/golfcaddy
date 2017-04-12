@@ -1,0 +1,19 @@
+challenge: Write a program that, given a comma-separated list of strings, prints "winner" if they are either all the same length and made of the same alphabet, or all different.If not, then print "loser".
+suggested_time: 30 minutes
+tests:
+  -
+    input: cat,act,tac
+    output: winner
+  -
+    input: act,doge,camel,dolphin
+    output: winner
+  -
+    input: act,doge,camel,bird
+    output: loser
+  -
+    input: fleet,leet,eel
+    output: loser
+  -
+    input: fleet,leet,bee
+    output: winner
+

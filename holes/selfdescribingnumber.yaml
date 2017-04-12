@@ -1,0 +1,33 @@
+challenge: Given a number, generate a new number based on how you'd read out groups of the digits. For instance, "1211" becomes "111221" ("one one, one two, two ones").
+suggested_time: 1 hour
+tests:
+  -
+    input: 1
+    output: 11
+  -
+    input: 11
+    output: 21
+  -
+    input: 21
+    output: 1211
+  -
+    input: 1211
+    output: 111221
+  -
+    input: 111221
+    output: 312211
+  -
+    input: 312211
+    output: 13112221
+  -
+    input: 13112221
+    output: 1113213211
+  -
+    input: 1113213211
+    output: 31131211131221
+  -
+    input: 31131211131221
+    output: 13211311123113112211
+  -
+    input: 13211311123113112211
+    output: 11131221133112132113212221

@@ -1,4 +1,5 @@
 challenge: Given a string, double all the characters in that string.
+suggested_time: 15 minutes
 tests:
   -
     input: a
